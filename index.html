@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0A0A0A">
+<meta name="author" content="Premium Gate &amp; Frame Prefabrications Limited">
 <meta property="og:url" content="https://csaethercompany-cell.github.io/premiumgateandframe/">
 <meta property="og:site_name" content="Premium Gate &amp; Frame">
 <meta property="og:image" content="https://csaethercompany-cell.github.io/premiumgateandframe/preview.png">
@@ -11,6 +12,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/key.png">
+<link rel="apple-touch-icon" href="img/key.png">
 <title>Premium Gate &amp; Frame Digital Catalogue</title>
 <meta name="description" content="Official digital catalogue of Premium Gate &amp; Frame, Kariobangi and Kamakis. Gate hardware, bushes, curtain fittings, welding and fixings. Full catalogue inside. Order on WhatsApp.">
 <meta property="og:title" content="Premium Gate &amp; Frame | Digital Catalogue">
@@ -20,7 +22,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a black metal brand card on top, a sticky audience switcher, then a product wall of studio-lit plates; tapping a plate opens a sheet with sizes and a WhatsApp order button. */
 :root {
   --bg: #0A0A0A;
   --bg-2: #101113;
@@ -83,11 +84,9 @@ button { font: inherit; color: inherit; }
 svg.ic { width: 20px; height: 20px; flex: none; }
 :focus-visible { outline: 2px solid var(--silver-hi); outline-offset: 3px; border-radius: 10px; }
 
-/* Ambient halo */
 .halo { position: fixed; z-index: 0; left: 50%; top: -180px; width: min(1100px, 160vw); height: 520px; transform: translateX(-50%);
   background: radial-gradient(closest-side, rgba(200, 202, 206, 0.12), rgba(200, 202, 206, 0)); pointer-events: none; animation: halo 14s ease-in-out infinite; }
 
-/* Hero */
 .hero { position: relative; z-index: 1; padding-block: 22px 18px; }
 .hero-grid { display: grid; gap: 18px; grid-template-columns: 1fr; align-items: stretch; }
 @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.25fr 1fr; gap: 22px; } }
@@ -131,7 +130,6 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 .stat b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .stat span { font-size: 12px; color: var(--muted); }
 
-/* Sticky bar */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border-bottom: 1px solid var(--line); }
 .bar-in { display: flex; flex-direction: column; gap: 10px; padding-block: 10px 12px; }
@@ -152,13 +150,12 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 .search input { width: 100%; height: 44px; border-radius: 14px; border: 0; padding: 0 40px 0 42px; background: var(--surface); color: var(--fg);
   box-shadow: inset 0 0 0 1px var(--line-2); font: 500 15px var(--f-body); }
 .search input::placeholder { color: var(--muted); }
-.search .clear { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
+.search .clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
 .branch { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); }
 .seg { display: inline-flex; padding: 3px; border-radius: 12px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
-.seg button { border: 0; background: transparent; padding: 7px 11px; border-radius: 9px; font-size: 12.5px; font-weight: 600; color: var(--muted); cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+.seg button { border: 0; background: transparent; min-height: 40px; padding: 7px 12px; border-radius: 9px; font-size: 12.5px; font-weight: 600; color: var(--muted); cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 4px 10px -6px rgba(0,0,0,0.5); }
 
-/* Section intro */
 .intro { padding-block: 22px 6px; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 6px 18px; }
 .intro h2 { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: clamp(24px, 5.4vw, 34px); letter-spacing: -0.01em; text-wrap: balance; }
 .intro p { margin: 4px 0 0; color: var(--muted); max-width: 60ch; }
@@ -166,11 +163,10 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 .chips-scroll { overflow-x: auto; scrollbar-width: none; padding-block: 10px 14px; margin-inline: -4px; padding-inline: 4px; }
 .chips-scroll::-webkit-scrollbar { display: none; }
 .chips { display: inline-flex; gap: 8px; white-space: nowrap; }
-.chip { border: 0; cursor: pointer; padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--fg); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line-2); transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease; }
+.chip { border: 0; cursor: pointer; min-height: 42px; padding: 8px 15px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--fg); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line-2); transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease; }
 .chip.on { background: var(--fg); color: var(--bg); box-shadow: none; }
 .chip:active { transform: scale(0.96); }
 
-/* Product wall */
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-bottom: 8px; }
 @media (min-width: 700px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
 @media (min-width: 1020px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -183,7 +179,7 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 .plate::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 65%);
   transform: translateX(-120%); transition: transform 0.9s ease; pointer-events: none; }
 .card-body { display: flex; flex-direction: column; gap: 3px; padding: 12px 13px 10px; min-width: 0; }
-.card-cat { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.card-cat { font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .card-name { font-family: var(--f-display); font-weight: 500; font-size: 16.5px; line-height: 1.2; color: var(--fg); text-wrap: balance; }
 .card-span { font-size: 12.5px; color: var(--muted); }
 .ask { margin: 2px 12px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; border-radius: 12px; text-decoration: none;
@@ -199,7 +195,6 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 .card-hit:active .plate img { transform: scale(0.98); }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
-/* Sections */
 .sec { padding-block: 34px 6px; }
 .sec h2 { margin: 0 0 4px; font-family: var(--f-display); font-weight: 500; font-size: clamp(22px, 5vw, 30px); letter-spacing: -0.01em; }
 .sec > p, .sec .sub { margin: 0 0 16px; color: var(--muted); max-width: 62ch; }
@@ -229,14 +224,12 @@ svg.ic { width: 20px; height: 20px; flex: none; }
 footer { padding-block: 34px 120px; color: var(--muted); font-size: 13px; text-align: center; }
 footer b { color: var(--fg); font-weight: 600; }
 
-/* Floating WhatsApp */
 .fab { position: fixed; z-index: 25; right: max(16px, calc(env(safe-area-inset-right, 0px) + 12px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px));
   width: 58px; height: 58px; border-radius: 20px; display: grid; place-items: center; background: var(--btn-bg); color: var(--btn-fg); text-decoration: none;
   box-shadow: 0 16px 30px -12px rgba(0,0,0,0.7); animation: float 6s ease-in-out infinite; }
 .fab svg { width: 28px; height: 28px; }
 .fab::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 2px var(--silver); animation: ring 3.6s ease-out infinite 2s; }
 
-/* Sheet */
 .scrim { position: fixed; inset: 0; z-index: 40; background: var(--scrim); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.3s ease; }
 .scrim.show { opacity: 1; }
 .sheet { position: fixed; z-index: 41; left: 0; right: 0; bottom: 0; max-height: 92%; overflow-y: auto; background: var(--bg-2); border-radius: 26px 26px 0 0;
@@ -277,7 +270,6 @@ footer b { color: var(--fg); font-weight: 600; }
   background: var(--fg); color: var(--bg); font-weight: 700; font-size: 14px; padding: 11px 18px; border-radius: 999px; transition: opacity 0.2s ease, transform 0.2s ease; max-width: calc(100vw - 32px); text-align: center; }
 .toast.on { opacity: 1; transform: translate(-50%, 0); }
 
-/* Motion */
 @keyframes rise { from { opacity: 0; transform: translateY(16px) scale(0.985); } to { opacity: 1; transform: none; } }
 @keyframes drift { 0%, 100% { transform: translateY(0) rotate(-15deg); } 50% { transform: translateY(-9px) rotate(-13deg); } }
 @keyframes glint { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.16); } }
@@ -330,7 +322,7 @@ footer b { color: var(--fg); font-weight: 600; }
 .pnav { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
 .pnav .rbtn { width: 40px; height: 40px; border-radius: 12px; border: 0; cursor: pointer; background: var(--surface); box-shadow: 0 0 0 1px var(--line); font-size: 18px; font-weight: 700; }
 .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
-.toc button { border: 0; cursor: pointer; padding: 8px 12px; border-radius: 99px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); font-size: 13px; font-weight: 600; color: var(--fg); }
+.toc button { border: 0; cursor: pointer; min-height: 42px; padding: 8px 13px; border-radius: 99px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); font-size: 13px; font-weight: 600; color: var(--fg); }
 .toc button em { font-style: normal; color: var(--muted); margin-left: 4px; font-weight: 500; }
 .lb { position: fixed; inset: 0; z-index: 60; background: rgba(6,6,7,.94); display: flex; flex-direction: column; }
 .lb[hidden] { display: none; }
@@ -343,7 +335,7 @@ footer b { color: var(--fg); font-weight: 600; }
 .lb.zoom .lb-body img { width: 200%; max-width: none; }
 .lb-nav { display: flex; gap: 8px; justify-content: center; padding: 8px 12px calc(10px + env(safe-area-inset-bottom, 0px)); }
 .lb-nav button { flex: 1; max-width: 200px; height: 44px; border-radius: 12px; border: 0; cursor: pointer; background: #fff; color: #0A0A0A; font-weight: 700; }
-@media (max-width: 420px) { .actions { gap: 6px; } .act { font-size: 11.5px; } .act .disc { border-radius: 18px; } }
+@media (max-width: 420px) { .actions { gap: 6px; } .act { font-size: 12.5px; } .act .disc { border-radius: 18px; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .key { transform: rotate(-15deg); }
@@ -897,8 +889,6 @@ footer b { color: var(--fg); font-weight: 600; }
       syncBranch(); toast("WhatsApp now goes to " + BR[state.branch].name);
     });
   });
-
-  // Tabs with sliding indicator
   var ind = $(".tab-ind");
   function moveInd() {
     var on = $(".tab.on"); if (!on || !ind) return;
@@ -961,8 +951,6 @@ footer b { color: var(--fg); font-weight: 600; }
     $("#hits").hidden = hn === 0;
     var em = $("#empty-wa"); if (em) { em.dataset.msg = "Hi Premium Gate & Frame, do you have " + (state.q || "this product") + "? "; em.href = wa(em.dataset.msg); }
   }
-
-  // Full catalogue viewer
   var lb = $("#lb"), lbImg = $("#lb-img"), lbPage = 1, lbFrom = null;
   function pad(n) { return n < 10 ? "0" + n : "" + n; }
   function showPage(n) {
@@ -994,8 +982,6 @@ footer b { color: var(--fg); font-weight: 600; }
   var strip = $("#pages");
   $("#pprev").addEventListener("click", function () { strip.scrollBy({ left: -strip.clientWidth * 0.8, behavior: reduce ? "auto" : "smooth" }); });
   $("#pnext").addEventListener("click", function () { strip.scrollBy({ left: strip.clientWidth * 0.8, behavior: reduce ? "auto" : "smooth" }); });
-
-  // Sheet
   var current = null, vi = 0, lastFocus = null;
   var sheet = $("#sheet"), scrim = $("#scrim");
   function renderSheet(swap) {
@@ -1038,7 +1024,6 @@ footer b { color: var(--fg); font-weight: 600; }
   $("#s-close").addEventListener("click", closeSheet);
   scrim.addEventListener("click", closeSheet);
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeSheet(); });
-  // Swipe down to close on phones
   var sy = null;
   sheet.addEventListener("touchstart", function (e) { if (sheet.scrollTop <= 0) sy = e.touches[0].clientY; }, { passive: true });
   sheet.addEventListener("touchmove", function (e) { if (sy === null) return; var d = e.touches[0].clientY - sy; if (d > 0 && innerWidth < 820) sheet.style.transform = "translateY(" + d + "px)"; }, { passive: true });
@@ -1046,8 +1031,6 @@ footer b { color: var(--fg); font-weight: 600; }
     if (sy === null) return; var d = e.changedTouches[0].clientY - sy; sy = null; sheet.style.transform = "";
     if (d > 110 && innerWidth < 820) closeSheet();
   });
-
-  // Copy
   var tt;
   function toast(m) { var t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(function () { t.classList.remove("on"); }, 1800); }
   document.addEventListener("click", function (e) {
@@ -1056,15 +1039,11 @@ footer b { color: var(--fg); font-weight: 600; }
     function fallback() { var i = document.createElement("textarea"); i.value = text; document.body.appendChild(i); i.select(); try { document.execCommand("copy"); toast("Copied " + text); } catch (er) { toast(text); } i.remove(); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { toast("Copied " + text); }, fallback); else fallback();
   });
-
-  // Scroll progress
   var prog = $("#progress"), ticking = false;
   window.addEventListener("scroll", function () {
     if (ticking) return; ticking = true;
     requestAnimationFrame(function () { var h = document.documentElement.scrollHeight - innerHeight; prog.style.setProperty("--p", h > 0 ? Math.min(1, scrollY / h) : 0); ticking = false; });
   }, { passive: true });
-
-  // Count up
   if (!reduce) $$("[data-count]").forEach(function (el) {
     var end = +el.dataset.count, t0 = null;
     function step(t) { if (!t0) t0 = t; var p = Math.min(1, (t - t0) / 900); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
