@@ -347,6 +347,28 @@ footer b { color: var(--fg); font-weight: 600; }
 .var.soon[aria-pressed="true"]::after { color: #ffb3b3; }
 .soon-note { margin: 8px 0 0; font-size: 13.5px; font-weight: 600; color: #e05555; }
 .soon-note[hidden] { display: none; }
+.tgt { position: absolute; scroll-margin-top: 150px; }
+.nojs-note { display: block; margin: 0 0 14px; padding: 12px 14px; border-radius: 14px; background: var(--surface); box-shadow: 0 0 0 1px var(--line-2); font-size: 13.5px; line-height: 1.4; }
+.js .nojs-note { display: none; }
+.alt-intro { display: none; }
+html:not(.js):has(#fundis:target) .alt-intro[data-k="fundis"] { display: block; }
+html:not(.js):has(#fundis:target) .main-intro { display: none; }
+html:not(.js):has(#sites:target) .alt-intro[data-k="sites"] { display: block; }
+html:not(.js):has(#sites:target) .main-intro { display: none; }
+html:not(.js):has(#shops:target) .alt-intro[data-k="shops"] { display: block; }
+html:not(.js):has(#shops:target) .main-intro { display: none; }
+html:not(.js):has(#fundis:target) .card:not([data-aud*="f"]) { display: none; }
+html:not(.js):has(#fundis:target) .tab[data-aud="fundis"] { background: var(--btn-bg); color: var(--btn-fg); }
+html:not(.js):has(#fundis:target) .tab[data-aud="all"] { background: transparent; color: var(--muted); }
+html:not(.js):has(#fundis:target) #count { display: none; }
+html:not(.js):has(#sites:target) .card:not([data-aud*="s"]) { display: none; }
+html:not(.js):has(#sites:target) .tab[data-aud="sites"] { background: var(--btn-bg); color: var(--btn-fg); }
+html:not(.js):has(#sites:target) .tab[data-aud="all"] { background: transparent; color: var(--muted); }
+html:not(.js):has(#sites:target) #count { display: none; }
+html:not(.js):has(#shops:target) .card:not([data-aud*="r"]) { display: none; }
+html:not(.js):has(#shops:target) .tab[data-aud="shops"] { background: var(--btn-bg); color: var(--btn-fg); }
+html:not(.js):has(#shops:target) .tab[data-aud="all"] { background: transparent; color: var(--muted); }
+html:not(.js):has(#shops:target) #count { display: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .key { transform: rotate(-15deg); }
@@ -431,8 +453,10 @@ footer b { color: var(--fg); font-weight: 600; }
 </div>
 
 <main class="wrap" id="catalogue">
+  <i class="tgt" id="all"></i><i class="tgt" id="fundis"></i><i class="tgt" id="sites"></i><i class="tgt" id="shops"></i>
+  <p class="nojs-note"><b>You are viewing a simple preview.</b> For search, product sizes and the full catalogue viewer, tap Share and open this in Safari or Chrome.</p>
   <div class="intro">
-    <div><h2 id="aud-title">Top lines</h2><p id="aud-intro">Our fastest moving lines. Many more in the full catalogue and in store.</p></div>
+    <div class="alt-intro" data-k="fundis"><h2>For fundis</h2><p>Gate, grille, curtain and window parts in the sizes you use every day. More in the full catalogue.</p></div><div class="alt-intro" data-k="sites"><h2>For construction sites</h2><p>Fixings, cutting, welding and gate hardware for site work, in bulk. More in the full catalogue.</p></div><div class="alt-intro" data-k="shops"><h2>For retail shops</h2><p>Fast-moving lines to keep your shelves full. Ask about wholesale cartons. More in the full catalogue.</p></div><div class="main-intro"><h2 id="aud-title">Top lines</h2><p id="aud-intro">Our fastest moving lines. Many more in the full catalogue and in store.</p></div>
     <span class="count" id="count">27 product lines</span>
   </div>
   <div class="chips-scroll"><div class="chips" id="chips"><button class="chip on" type="button" data-cat="">All</button><button class="chip" type="button" data-cat="Gate hardware">Gate hardware</button><button class="chip" type="button" data-cat="Bushes and hinges">Bushes and hinges</button><button class="chip" type="button" data-cat="Discs and welding">Discs and welding</button><button class="chip" type="button" data-cat="Curtain fittings">Curtain fittings</button><button class="chip" type="button" data-cat="Decoration and fittings">Decoration and fittings</button><button class="chip" type="button" data-cat="Windows and doors">Windows and doors</button><button class="chip" type="button" data-cat="Fixings">Fixings</button></div></div>
